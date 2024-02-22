@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Codewars</title>
+        <link rel="stylesheet" href="/static/design/product.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+<body>
+
+    <section class="container1">
+        <header>
+            <img class="logo" src="/static/images/logodark.png" alt="logo">
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="{% url 'shop' %}">Shop</a></li>
+                    <li><a href="{% url 'index' %}">Sale</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'cart' %}">Cart</a></li>
+                </ul>           
+            </nav>
+            {% if user.is_authenticated %}
+            <a class="cta" href="/signout"><button type="submit">Sign Out</button></a>
+
+            {% else %}
+            <a class="cta" href="/signup"><button type="submit">Sign Up</button></a>
+            {% endif %}
+        </header>
+    </section>
+
+    
+    <section id="prodetails" class="product">
+        <div class="single-pro-image">
+            <img src="/static/images/Rectangle 4.png"></img>
+        </div>
+        <div class="single-pro-details">
+            <button class="btn" onclick="window.location.href='/shop'"><i class="bx bx-arrow-back"></i></button>
+            <h2 class="title2">Arni Shirt</h2>
+            <h4 class="product-title">Arni Drip</h4>
+            <span>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
+                <li>Very Good Product</li>
+                <li>Ekdum Nice Nice</li>
+                <li>Pls Lelo Yaar</li>
+            </span>
+            <form action=" " class="form">
+                <label for="quantity">SIZE:</label>
+                <input type="number" value="1" id="quantity" name="quantity" min="1" max="5">
+            </form>
+            <a class="cost">$800.00</a><button class="button" href="{% url 'cart' %}">Add To Cart</button>
+        </div>
+    </section>
+</body>
+</html>
