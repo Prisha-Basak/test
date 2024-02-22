@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+} 
+
+@font-face {
+    font-family: 'poppins';
+    src: url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+}
+
+
+/**********************NAVIGATION BAR*************************/
+
+.nav_links li, a{
+    font-family: 'poppins';
+    font-weight: 500px;
+    font-size: 16px;
+    color:rgba(32, 14, 14, 1);
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+}
+
+.logo{
+    cursor: pointer;
+    background-color: transparent;
+    height: 40px;
+}
+
+.nav_links{
+    list-style: none;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a{
+    display: inline-block;
+    position: relative;
+    transition: all 0.4s ease 0s;
+    font-size: 20px;
+}
+
+.nav_links li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(32, 14, 14, 1);
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out;
+}
+  
+.nav_links li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+header button {
+    font-size: 20px;
+    color:  rgba(32, 14, 14, 1);
+    padding: 9px 25px;
+    background-color: rgba(217, 217, 217, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.4s ease 0s;
+}
+
+header button:hover{
+    background-color:  rgba(32, 14, 14, 1);
+    color:  rgba(217, 217, 217, 1);
+}
+
+
+/*************PRODUCT PAGE****************/
+
+.single-pro-image img{
+    position: absolute;
+    left: 0;
+    height: 105vh;
+    width: 42%;
+}
+
+#prodetails{
+    font-family: 'poppins';
+    display: flex;
+}
+
+#prodetails .btn{
+    width: 60px;
+    height: 40px;
+    padding: 10px 20px;
+    margin: 20px 0px 30px;
+    border: 1px solid  rgba(198, 194, 118, 1);
+    border-radius: 10px;
+    font-size: 20px;
+    background: rgba(198, 194, 118, 0.833);
+    color:rgba(32, 14, 14, 0.76);
+    opacity: 0.7;
+    transition: 0.32s;
+    cursor: pointer;
+}
+
+#prodetails .single-pro-details .btn:hover{
+    background-color: rgba(198, 194, 118, 1);
+    border: 1px solid rgba(32, 14, 14, 1);
+    color: rgba(32, 14, 14, 1);
+    opacity: 1;
+}
+
+#prodetails .single-pro-image{
+    background-color: rgba(217, 217, 217, 1);
+    width: 50%;
+    margin-right: 80px;
+    height: 100vh;
+}
+
+#prodetails .single-pro-details{
+    width: 50%;
+    height: 100vh;
+    padding-top: 30px;
+    margin-right: 120px;
+    align-items: center;
+    color: rgba(32, 14, 14, 1);
+}
+
+#prodetails .single-pro-details h4{
+    padding: 15px 0 20px 0;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+#prodetails .single-pro-details select{
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+.title2{
+    font-weight: 100;
+}
+
+.form{
+    position: absolute;
+    top:80%;
+    padding-left: 20px;
+}
+
+.form input{
+    height: 30px;
+    width: 40px;
+    padding: 5px;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+.cost{
+    position: absolute;
+    padding-left: 20px;
+    top: 90%;
+    color: rgba(32, 14, 14, 1);
+    font-size: 25px;
+}
+
+#prodetails .single-pro-details .button{
+    padding: 10px 20px;
+    margin: 80px 20px 0px 320px;
+    width: 200px;
+    font-size: 20px;
+    background-color: rgba(198, 194, 118, 0.833);;
+    cursor: pointer;
+    opacity: 0.7;
+    border: none;
+    border-radius: 5px;
+    color: rgba(32, 14, 14, 0.76);
+    transition: 0.32s;
+}
+
+#prodetails .single-pro-details .button:hover{
+    opacity: 1;
+    border: 1px solid rgba(32, 14, 14, 1);
+    background-color: rgba(198, 194, 118, 1);
+    color: rgba(32, 14, 14, 1);
+}
+
+#prodetails .single-pro-details span{
+    line-height: 25px;
+    padding-bottom: 80px;
+}
+
+
+
