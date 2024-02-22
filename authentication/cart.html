@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CORE Prompt</title>
+        <meta name="description" content="">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/static/design/cart.css">
+    </head>
+    <body>
+
+        <section class="container1">
+            <header>
+                <img class="logo" src="/static/images/logodark.png" alt="logo">
+                <nav>
+                    <ul class="nav_links">
+                        <li><a href="{% url 'shop' %}">Shop</a></li>
+                        <li><a href="{% url 'index' %}">Sale</a></li>
+                        <li><a href="{% url 'about' %}">About</a></li>
+                        <li><a href="#" class="active">Cart</a></li>
+                    </ul>           
+                </nav>
+                {% if user.is_authenticated %}
+                <a class="cta" href="/signout"><button type="submit">Sign Out</button></a>
+
+                {% else %}
+                <a class="cta" href="/signup"><button type="submit">Sign Up</button></a>
+                {% endif %}
+            </header>
+        </section>
+
+        <section class="section">
+            <h1 class="text-center1">Your Cart</h1>
+            <div class="small-container cart-page">
+                <table class="cart-items">
+                    <tr class="pro-info">
+                        <td>
+                            <div class="cart-info">
+                                <img src="/static/images/Rectangle 4.png">
+                            </div>
+                        <td>
+                            <div class="details">
+                                <a>Arni Shirt</a>
+                                <br>
+                                <p>Arni Drip</p>
+                                <text>Lörem ipsum tetravis plav plasivis för att mikrootrohet. Triska furade rere krode sedan reng. Homotiktiga futiment huruvida simulig. 
+                                    Mel ossa tölig. Multiktig alig halvpudel. On plabening dov. Du kan vara drabbad. </text>
+                                <br>
+                                <label for="quantity" class="qq">QUANTITY:</label>
+                                <input type="number" value="1" class="cart-quantity-input">
+                            </div>
+                        </td>
+                        </td>
+                        <td class="cart-price">$800.00
+                            <br>
+                        <button class="btn-danger"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr class="pro-info">
+                        <td>
+                            <div class="cart-info">
+                                <img src="/static/images/Rectangle 4.png">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="details">
+                                <a>Arni Shirt</a>
+                                <br>
+                                <p>Arni Drip</p>
+                                <text>Lörem ipsum tetravis plav plasivis för att mikrootrohet. Triska furade rere krode sedan reng. Homotiktiga futiment huruvida simulig. 
+                                    Mel ossa tölig. Multiktig alig halvpudel. On plabening dov. Du kan vara drabbad. </text>
+                                <br>
+                                <label for="quantity" class="qq">QUANTITY:</label>
+                                <input type="number" value="1" class="cart-quantity-input">
+                            </div>
+                        </td>
+                        <td class="cart-price">$800.00
+                            <br>
+                        <button class="btn-danger"><i class="fa-solid fa-trash fa-sm"></i></button>
+                        </td>
+                    </tr>
+                    <tr class="pro-info">
+                        <td>
+                            <div class="cart-info">
+                                <img src="/static/images/Rectangle 4.png">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="details">
+                                <a>Arni Shirt</a>
+                                <br>
+                                <p>Arni Drip</p>
+                                <text>Lörem ipsum tetravis plav plasivis för att mikrootrohet. Triska furade rere krode sedan reng. Homotiktiga futiment huruvida simulig. 
+                                    Mel ossa tölig. Multiktig alig halvpudel. On plabening dov. Du kan vara drabbad. </text>
+                                <br>
+                                <label for="quantity" class="qq">QUANTITY:</label>
+                                <input type="number" value="1" class="cart-quantity-input">
+                            </div>
+                        </td>
+                        <td class="cart-price">$800.00
+                            <br>
+                        <button class="btn-danger"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="total-price">
+                    <table>
+                        <tr>
+                            <td>total</td>
+                            <td  class="cart-total-price">$2400.00</td>
+                        </tr>
+                        <tr>
+                            <div class="address">
+                                <input type="text" placeholder="Enter Address"><input type="submit">
+                            </div>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    <script src="/static/function/cart.js"></script>
+    <script src="https://kit.fontawesome.com/d8eb02750e.js" crossorigin="anonymous"></script>
+    </body>
+</html>
